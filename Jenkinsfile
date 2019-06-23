@@ -1,18 +1,21 @@
-pipeline {
-    agent {
-        docker {
-		    image 'maven:3.6.1'
-			args -p '8080:8080'
-		}
-	}
-	stages{
-	    stage ('Build'){
-		    steps{
-			    sh '''
-				mvn clean
-				mvn clean install
-				'''
+pipeline{
+    agent any
+	     tools {
+		        jdk "Java-1.8"
+			maven "Maven-3.5.3"
 				}
-			}
-		}
-}
+	stages{
+	    stage('Clone sources'){
+		    steps {
+			     git url: 'https://github.com/cBayrak/springboot.git'
+				 }
+		 }
+		stage('Execute Maven'){
+		steps{
+		    script{
+			rtMaven.run pom: 'pom.xml', goals 'clean install', buildInfo: buildInfo
+ }
+ }
+ }
+ }
+ }
