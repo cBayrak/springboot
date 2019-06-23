@@ -7,11 +7,13 @@ pipeline{
 				 }
 		 }
 		stage('Execute Maven'){
-		steps{
-		    script{
-			rtMaven.run pom: 'pom.xml', goals 'clean install'
+                steps{
+			    sh '''
+				mvn clean
+				mvn clean install
+				'''
+				}
  }
  }
  }
- }
- }
+}
