@@ -20,22 +20,3 @@ pipeline{
  }
  }
  }
-=======
-pipeline {
-    agent {
-        docker {
-		    image 'maven:3.6.1'
-		}
-	}
-	stages{
-	    stage ('Build'){
-		    steps{
-			    sh '''
-				mvn clean
-				mvn clean install
-				'''
-			}
-		}
-	}
-}
->>>>>>> 26587c40a0157a645403742a43dd9d40bd72aa0a
