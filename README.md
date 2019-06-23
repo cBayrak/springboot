@@ -1,13 +1,5 @@
-# Spring Security Login Tutorial
+# Spring Boot Web Application
+This repository has the project files for a tutorial series on Spring Boot available from by website at [Spring Framework Guru](https://springframework.guru)
 
-Tutorial / Full Information
-https://medium.com/@gustavo.ponce.ch/spring-boot-spring-mvc-spring-security-mysql-a5d8545d837d
-
-1. mvn clean
-2. mvn clean install
-3. Go to the target folder
-4. java -jar login-0.0.1-SNAPSHOT.jar
-
-
-- http://localhost:8080/registration
-- http://localhost:8080/login
+## Checkout the full tutorial here!
+[Spring Boot - making Spring Fun again!](https://springframework.guru/spring-boot-web-application-part-1-spring-initializr/)
